@@ -19,8 +19,9 @@ public class MainTrain {
 		} catch (NoSuchFieldException | SecurityException e) {
 			System.out.println("BinaryExpression does not have correct fields (-10)"); // -10
 		}
-		
-		System.out.println("done");
+		// Expression exp = new Plus(new Minus(4, 2), new Mul(9, 6));
+		Expression exp = new Plus(new Minus(new Number(4), new Number(2)), new Mul(new Number(9), new Number(6)));
+		System.out.println(exp.calculate());
 	}
 
 }
